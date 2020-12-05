@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from './components/Header'
+import Balance from './components/Balance'
+import AddTransaction from './components/AddTransaction'
+import IncomeList from './components/IncomeList'
+import { GlobalContextProvider } from './context/GlobalState'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import './scss/App.scss'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+	return (
+		<GlobalContextProvider>
+			<div className='container'>
+				<div className='row justify-content-md-center'>
+					<div className='col col-md-12 bg-primary py-3'>
+						<Header />
+					</div>
+					<div className='col-md-6  py-3'>
+						<AddTransaction />
+						<Balance />
+					</div>
+					<div className='col-md-6 py-3'>
+						<IncomeList />
+					</div>
+				</div>
+			</div>
+		</GlobalContextProvider>
+	)
 }
 
-export default App;
+export default App
