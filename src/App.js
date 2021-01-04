@@ -6,20 +6,22 @@ import IncomeList from './components/IncomeList'
 import { GlobalContextProvider } from './context/GlobalState'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './scss/App.scss'
+import logo from './img/logo_art_W.svg'
 
 const App = () => {
 	return (
 		<GlobalContextProvider>
 			<div className='container'>
 				<div className='row justify-content-md-center'>
-					<div className='col col-md-12 bg-primary py-3'>
+					<div className='col col-md-4 bg-primary py-3'>
 						<Header />
 					</div>
-					<div className='col-md-6  py-3'>
+					<img className='w-25' src={logo} alt='logo'/>
+					<div className='col-md-4 py-3'>
 						<AddTransaction />
 						<Balance />
 					</div>
-					<div className='col-md-6 py-3'>
+					<div className='col-md-4 py-3'>
 						<IncomeList />
 					</div>
 				</div>

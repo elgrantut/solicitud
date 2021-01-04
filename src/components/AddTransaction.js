@@ -67,6 +67,13 @@ const AddTransaction = () => {
 	return (
 		<div className='col p-2'>
 			<form onSubmit={onSubmitIncome}>
+			<h1 className='text-primary fw-light'>
+				Galeno Fondos
+			</h1>
+			<h5 className='text-primary fw-light'>
+				Aplicación de cálculo de fondos para ofrecimientos en
+				audiencias.
+			</h5>
 				<div className='form-group'>
 					<input
 						className='form-control'
@@ -97,21 +104,21 @@ const AddTransaction = () => {
 						checked={ivaChceckBox}
 						onChange={handleIvaCheckBox}
 					/>
-					<label className='form-check-label'>Iva</label>
+					<label className='form-check-label text-secondary fw-bold'>IVA</label>
 				</div>
 				<div className='form-group form-check-inline'>
 					<input
-						className='form-check-input'
+						className='form-check-input '
 						name='incomeAportes'
 						type='checkbox'
 						checked={aportesCheckBox}
 						onChange={handleAportesCheckBox}
 					/>
-					<label className='form-check-label'>Aportes</label>
+					<label className='form-check-label text-secondary fw-bold'>Aportes</label>
 				</div>
 				<div className='form-group'>
-					<button className='btn btn-primary' type='submit' value='submit'>
-						submit
+					<button className='btn btn-secondary' type='submit' value='submit'>
+						Agregar
 					</button>
 				</div>
 			</form>

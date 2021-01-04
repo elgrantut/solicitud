@@ -29,7 +29,7 @@ const Balance = () => {
 		<div>
 			<h2>Tu solicitud: </h2>
 			<div>
-				<h5 className='display-4 text-success'>${totalBalance}</h5>
+				<h5 className='display-4 text-secondary'>${totalBalance}</h5>
 			</div>
 		</div>
 	)

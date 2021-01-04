@@ -1,19 +1,11 @@
 import React from 'react'
+import img from '../img/flame-remote-working.png'
 
 const Header = () => {
 	return (
 		<div>
-			<img
-				src='https://www.galenoseguros.com.ar/seguros/images/logo.svg'
-				alt=''
-			/>
-			<h1 className=' display-4 text-white font-weight-lighter'>
-				Galeno Fondos
-			</h1>
-			<h5 className='text-white font-weight-light'>
-				Web App de cálculo para la solicitud de fondos para ofrecimientos en
-				audiencias.
-			</h5>
+			<img className='w-100 p-3' src={img} alt='logo'/>
+			
 		</div>
 	)
 }
